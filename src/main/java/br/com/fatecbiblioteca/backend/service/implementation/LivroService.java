@@ -66,6 +66,9 @@ public class LivroService implements ILivroService {
 
     @Override
     public void excluirLivro(Long id) {
+        repository.findById(id)
+                .orElseThrow(() -> new LeitorNotFoundException(id));
+
         repository.deleteById(id);
     }
 }
