@@ -3,9 +3,11 @@ package br.com.fatecbiblioteca.backend.DTO;
 import br.com.fatecbiblioteca.backend.model.EmprestimoEntity;
 import br.com.fatecbiblioteca.backend.model.LeitorEntity;
 import br.com.fatecbiblioteca.backend.model.LivroEntity;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+@NoArgsConstructor
 public class EmprestimoDTO {
     private Long Id;
     private LeitorEntity LeitorEntity;

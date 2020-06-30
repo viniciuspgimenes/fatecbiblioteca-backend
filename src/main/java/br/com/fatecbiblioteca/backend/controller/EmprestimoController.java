@@ -15,5 +15,4 @@ public class EmprestimoController {
         service = _service;
     }
 
-
 }

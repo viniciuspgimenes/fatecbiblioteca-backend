@@ -27,13 +27,13 @@ public class LivroController {
     }
 
     @PostMapping
-    LivroDTO criarLeitor(@RequestBody LivroDTO novoLivro) {
-        return service.criarLeitor(novoLivro);
+    LivroDTO criarLivro(@RequestBody LivroDTO novoLivro) {
+        return service.criarLivro(novoLivro);
     }
 
     @PutMapping("/{id}")
-    LivroDTO atualizarLeitor(@RequestBody LivroDTO novoLivro, @PathVariable Long id) {
-        return service.atualizarLeitor(novoLivro, id);
+    LivroDTO atualizarLivro(@RequestBody LivroDTO novoLivro, @PathVariable Long id) {
+        return service.atualizarLivro(novoLivro, id);
     }
 
     @DeleteMapping("/{id}")

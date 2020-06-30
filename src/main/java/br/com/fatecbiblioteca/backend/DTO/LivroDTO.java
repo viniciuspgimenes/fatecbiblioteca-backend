@@ -1,7 +1,9 @@
 package br.com.fatecbiblioteca.backend.DTO;
 
 import br.com.fatecbiblioteca.backend.model.LivroEntity;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class LivroDTO {
     private Long Id;
     private String ISBN;

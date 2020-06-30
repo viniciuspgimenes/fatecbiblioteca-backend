@@ -1,7 +1,9 @@
 package br.com.fatecbiblioteca.backend.DTO;
 
 import br.com.fatecbiblioteca.backend.model.LeitorEntity;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class LeitorDTO {
     private Long Id;
     private String Nome;

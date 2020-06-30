@@ -1,13 +1,9 @@
 package br.com.fatecbiblioteca.backend.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
 @Entity
 public class LeitorEntity {

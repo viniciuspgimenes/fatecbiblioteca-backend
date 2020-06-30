@@ -9,9 +9,9 @@ public interface ILivroService {
 
     LivroDTO buscarLivro(Long id);
 
-    LivroDTO criarLeitor(LivroDTO novoLivro);
+    LivroDTO criarLivro(LivroDTO novoLivro);
 
-    LivroDTO atualizarLeitor(LivroDTO novoLivro, Long id);
+    LivroDTO atualizarLivro(LivroDTO novoLivro, Long id);
 
     void excluirLivro(Long id);
 }
