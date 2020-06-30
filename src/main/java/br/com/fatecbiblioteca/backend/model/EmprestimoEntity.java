@@ -15,8 +15,19 @@ public class EmprestimoEntity {
     private LeitorEntity LeitorEntity;
     @OneToOne
     private LivroEntity LivroEntity;
-    private String MovimentacaoEnum;
+    private String Movimentacao;
     private LocalDateTime DataMovimentacao;
+
+    public EmprestimoEntity() {
+    }
+
+    public EmprestimoEntity(Long id, LeitorEntity leitorEntity, LivroEntity livroEntity, String movimentacao, LocalDateTime dataMovimentacao) {
+        Id = id;
+        LeitorEntity = leitorEntity;
+        LivroEntity = livroEntity;
+        Movimentacao = movimentacao;
+        DataMovimentacao = dataMovimentacao;
+    }
 
     public Long getId() {
         return Id;
@@ -42,12 +53,12 @@ public class EmprestimoEntity {
         LivroEntity = livroEntity;
     }
 
-    public String getMovimentacaoEnum() {
-        return MovimentacaoEnum;
+    public String getMovimentacao() {
+        return Movimentacao;
     }
 
-    public void setMovimentacaoEnum(String movimentacaoEnum) {
-        MovimentacaoEnum = movimentacaoEnum;
+    public void setMovimentacao(String movimentacao) {
+        Movimentacao = movimentacao;
     }
 
     public LocalDateTime getDataMovimentacao() {
@@ -58,14 +69,4 @@ public class EmprestimoEntity {
         DataMovimentacao = dataMovimentacao;
     }
 
-    public EmprestimoEntity() {
-    }
-
-    public EmprestimoEntity(Long id, LeitorEntity leitorEntity, LivroEntity livroEntity, String movimentacaoEnum, LocalDateTime dataMovimentacao) {
-        Id = id;
-        LeitorEntity = leitorEntity;
-        LivroEntity = livroEntity;
-        MovimentacaoEnum = movimentacaoEnum;
-        DataMovimentacao = dataMovimentacao;
-    }
 }
