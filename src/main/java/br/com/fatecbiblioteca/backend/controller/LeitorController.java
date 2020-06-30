@@ -1,7 +1,7 @@
 package br.com.fatecbiblioteca.backend.controller;
 
 import br.com.fatecbiblioteca.backend.DTO.LeitorDTO;
-import br.com.fatecbiblioteca.backend.service.implementation.LeitorService;
+import br.com.fatecbiblioteca.backend.service.contracts.ILeitorService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,9 +10,9 @@ import java.util.List;
 @RequestMapping("/leitores")
 public class LeitorController {
 
-    private final LeitorService service;
+    private final ILeitorService service;
 
-    LeitorController(LeitorService _service) {
+    LeitorController(ILeitorService _service) {
         service = _service;
     }
 

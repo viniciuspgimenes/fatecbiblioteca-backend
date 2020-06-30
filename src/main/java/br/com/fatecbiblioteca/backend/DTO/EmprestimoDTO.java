@@ -1,7 +1,6 @@
 package br.com.fatecbiblioteca.backend.DTO;
 
 import br.com.fatecbiblioteca.backend.model.EmprestimoEntity;
-import br.com.fatecbiblioteca.backend.model.LeitorEntity;
 import br.com.fatecbiblioteca.backend.model.LivroEntity;
 import lombok.NoArgsConstructor;
 
@@ -10,18 +9,27 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class EmprestimoDTO {
     private Long Id;
-    private LeitorEntity LeitorEntity;
-    private LivroEntity LivroEntity;
+    private Long LeitorId;
+    private Long LivroId;
     private String Movimentacao;
     private LocalDateTime DataMovimentacao;
 
+    public EmprestimoDTO(Long id, Long leitorId, Long livroId, String movimentacao, LocalDateTime dataMovimentacao) {
+        Id = id;
+        LeitorId = leitorId;
+        LivroId = livroId;
+        Movimentacao = movimentacao;
+        DataMovimentacao = dataMovimentacao;
+    }
+
     public EmprestimoDTO(EmprestimoEntity emprestimoEntity) {
         Id = emprestimoEntity.getId();
-        LeitorEntity = emprestimoEntity.getLeitorEntity();
-        LivroEntity = emprestimoEntity.getLivroEntity();
+        LeitorId = emprestimoEntity.getLeitorEntity().getId();
+        LivroId = emprestimoEntity.getLivroEntity().getId();
         Movimentacao = emprestimoEntity.getMovimentacao();
         DataMovimentacao = emprestimoEntity.getDataMovimentacao();
     }
+
 
     public Long getId() {
         return Id;
@@ -31,20 +39,20 @@ public class EmprestimoDTO {
         Id = id;
     }
 
-    public br.com.fatecbiblioteca.backend.model.LeitorEntity getLeitorEntity() {
-        return LeitorEntity;
+    public Long getLeitorId() {
+        return LeitorId;
     }
 
-    public void setLeitorEntity(br.com.fatecbiblioteca.backend.model.LeitorEntity leitorEntity) {
-        LeitorEntity = leitorEntity;
+    public void setLeitorId(Long leitorId) {
+        LeitorId = leitorId;
     }
 
-    public br.com.fatecbiblioteca.backend.model.LivroEntity getLivroEntity() {
-        return LivroEntity;
+    public Long getLivroId() {
+        return LivroId;
     }
 
-    public void setLivroEntity(br.com.fatecbiblioteca.backend.model.LivroEntity livroEntity) {
-        LivroEntity = livroEntity;
+    public void setLivroId(Long livroId) {
+        LivroId = livroId;
     }
 
     public String getMovimentacao() {
